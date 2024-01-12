@@ -21,7 +21,7 @@ instagram: "https://www.instagram.com/imswarnil"
 
 
 # PWA Configuration
-baseurl: "" # Ensure baseurl is an empty string or set appropriately
+baseurl: "/Links" # Ensure baseurl is an empty string or set appropriately
 manifest:
   name: Your PWA Name
   short_name: PWA
