@@ -157,11 +157,3 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
-
-<script>
-  if('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
-    })
-  }
-</script>
