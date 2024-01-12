@@ -1,0 +1,86 @@
+<!-- _includes/head.html -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }}</title>
+  
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <meta name="keywords" content="{{ site.keywords }}">
+    <meta name="author" content="{{ site.author }}">
+    <meta name="robots" content="{{ site.robots }}">
+    <meta name="generator" content="Jekyll">
+  
+    <!-- Open Graph and Twitter Meta Tags for Social Media Sharing -->
+    <meta property="og:title" content="{{ page.title | default: site.title }}">
+    <meta property="og:description" content="{{ page.description | default: site.description }}">
+    <meta property="og:image" content="{{ site.url }}{{ page.image | default: site.default_image }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page.title | default: site.title }}">
+    <meta name="twitter:description" content="{{ page.description | default: site.description }}">
+    <meta name="twitter:image" content="{{ site.url }}{{ page.image | default: site.default_image }}">
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+  
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{{ site.baseurl }}/assets/images/favicon.ico" type="image/x-icon">
+  
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+  
+    <!-- PWA (Progressive Web App) Tags -->
+    {% if jekyll.environment == "production" %}
+      {% assign baseUrl = site.url | append: site.baseurl %}
+    {% else %}
+      {% assign baseUrl = "" %}
+    {% endif %}
+    <link rel="manifest" href="{{ "/manifest.json" | prepend: site.baseurl | prepend: site.url }}" />
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ site.baseurl }}/assets/images/Imswarnil.png">
+    <meta name="theme-color" content="#ffffff">
+  
+    <!-- Google Analytics -->
+    {% if site.google_analytics %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+      </script>
+    {% endif %}
+  
+    <!-- Google AdSense -->
+    {% if site.adsense %}
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "{{ site.adsense }}",
+          enable_page_level_ads: true
+        });
+      </script>
+    {% endif %}
+    
+    <!-- Schema.org Microdata -->
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "{{ site.title }}",
+        "description": "{{ site.description }}",
+        "url": "{{ site.url }}",
+        "logo": "{{ baseUrl }}/assets/images/logo.png"
+      }
+    </script>
+  </head>
+  

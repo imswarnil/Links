@@ -1,0 +1,67 @@
+# _config.yml
+
+title: Swarnil Singhai
+description: Your site description
+keywords: Jekyll, SEO, Web Development
+author: Your Name
+robots: "index, follow" # Adjust based on your preference
+default_image: /assets/images/default-image.jpg # Add a default image for social media sharing
+
+# _sidebar
+
+# _config.yml
+
+email: "richard@example.com"
+phone: "+91 (773) 989-2795"
+birthday: "July 15, 1996"
+location: "Bangalore, India"
+facebook: "https://www.facebook.com/imswarnil"
+twitter: "https://twitter.com/imswarnil"
+instagram: "https://www.instagram.com/imswarnil"
+
+
+# PWA Configuration
+baseurl: "" # Ensure baseurl is an empty string or set appropriately
+manifest:
+  name: Your PWA Name
+  short_name: PWA
+  description: Your PWA description
+  start_url: /
+  display: standalone
+  background_color: "#ffffff"
+  theme_color: "#ffffff"
+  icons:
+    - src: /assets/images/icon.png
+      sizes: 192x192
+      type: image/png
+
+# Google Analytics
+google_analytics: UA-XXXXXXXXX-X # Add your Google Analytics tracking ID
+
+# Google AdSense
+adsense: ca-pub-XXXXXXXXXXXXXXXX # Add your AdSense Publisher ID
+
+
+# Build settings
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
